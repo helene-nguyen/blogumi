@@ -1,6 +1,5 @@
 
 import AddArticle from './addArticle';
-import { ArticleRepository } from '../../gateways/repositories/articleRepository';
 
 describe('Add an article', () => {
     //~GIVEN

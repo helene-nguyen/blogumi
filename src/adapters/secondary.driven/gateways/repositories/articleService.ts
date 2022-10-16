@@ -14,6 +14,9 @@ export default class ArticleService implements ArticleRepository {
 
     async insert(creationModel: CreationModel): Promise<string> {
         await this.db.create(creationModel);
+        // Here, I wanted to control if the content was well created after passing test
+        // const data = await this.db.read();
+        // console.log('data: ', data);
         return 'Content created successfully !';
     }
 }
