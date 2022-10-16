@@ -1,9 +1,11 @@
 
 import AddArticle from './addArticle';
+import { ArticleRepository } from '../../gateways/repositories/articleRepository';
 
 describe('Add an article', () => {
     //~GIVEN
     let addArticle: AddArticle;
+    // let articleRepository: ArticleRepository;
     const username = 'yumi';
     const content = 'Some content';
 
@@ -18,7 +20,7 @@ describe('Add an article', () => {
         //~ASSERT
         // This was my first step here ...
         // I want to have the role as admin
-        expect(addArticle.handle({
+        expect(await addArticle.handle({
             username,
             content,
             role: 'admin'
