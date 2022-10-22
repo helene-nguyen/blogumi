@@ -1,11 +1,11 @@
 import { Injectable } from "@nestjs/common";
-import { ArticleRepository } from "src/hexagon/gateways/repositories/articleRepository";
+import { HexaArticleRepository } from "src/hexagon/gateways/repositories/hexaArticleRepository";
 import CreationModel from "src/hexagon/models/articleModel";
 import  Database from '../database/fakeDatabase'
 
 
 @Injectable()
-export default class ArticleService implements ArticleRepository {
+export default class ArticleRepository implements HexaArticleRepository {
     db;
 
     constructor() {

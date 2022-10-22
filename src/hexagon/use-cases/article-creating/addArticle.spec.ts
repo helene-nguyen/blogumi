@@ -1,17 +1,21 @@
 
 import AddArticle from './addArticle';
+import ArticleRepository from '../../../adapters/secondary.driven/gateways/repositories/articleRepository';
 
 describe('Add an article', () => {
     //~GIVEN
     let addArticle: AddArticle;
-    // let articleRepository: ArticleRepository;
+    //fake Article repository
+    let articleRepository: ArticleRepository;
     const username = 'yumi';
     const content = 'Some content';
 
     //* beforeEach is only before the test
     //my error : I've put it in the 'it' statement
     beforeEach(() => {
-        addArticle = new AddArticle();
+        articleRepository = new ArticleRepository();
+
+        addArticle = new AddArticle(articleRepository);
     });
 
     it('should contains role admin', async () => {

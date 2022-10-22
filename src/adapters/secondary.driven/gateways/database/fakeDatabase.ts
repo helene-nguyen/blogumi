@@ -1,8 +1,8 @@
-interface DatabaseProps {
-    add?: () => void;
-    values?: () => void;
-    delete?: () => void;
-}
+// interface DatabaseProps {
+//     add?: () => void;
+//     values?: () => void;
+//     delete?: () => void;
+// }
 
 interface DataObj {
     username: string;
